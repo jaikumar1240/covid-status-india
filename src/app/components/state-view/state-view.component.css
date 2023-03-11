@@ -1,0 +1,39 @@
+main {
+    display: flex;
+}
+
+.table {
+    display: flex;
+    height: 70vh;
+    overflow: scroll;
+    flex-direction: column;
+}
+
+.list {
+    height: 70vh;
+    overflow: scroll;
+}
+
+.state-name {
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0px 0px 2px 0px;
+    background: aliceblue;
+    cursor: pointer;
+}
+
+.district-table {
+    display: flex;
+    min-height: 41vh;
+    overflow: scroll;
+}
+
+.content {
+    box-shadow: 0px 0px 2px 0px;
+    padding: 0.5rem;
+}
+
+.head {
+    background-color: aquamarine;
+    padding: 1rem;
+}

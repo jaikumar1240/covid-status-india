@@ -1,0 +1,40 @@
+<main>
+    <section class="list">
+        <div class="state-name" *ngFor="let item of data | keyvalue">
+            <span (click)="stateSelected(item)">{{namingObj[item.key]}}</span>
+        </div>
+    </section>
+    <section class="table">
+        <div class="district-table">
+            <div>
+                <div class="head">District</div>
+                <div class="content" *ngFor="let dist of districts">
+                    {{dist}}
+                </div>
+            </div>
+            <div>
+                <div class="head">Confirmed</div>
+                <div *ngIf="confirmed" class="content">{{confirmed}}</div>
+            </div>
+            <div>
+                <div class="head">Recovered</div>
+                <div *ngIf="confirmed" class="content">{{recovered}}</div>
+            </div>
+            <div>
+                <div class="head">Deaths</div>
+                <div *ngIf="confirmed" class="content">{{deceased}}</div>
+            </div>
+            <div>
+                <div class="head">Tested</div>
+                <div *ngIf="confirmed" class="content">{{tested}}</div>
+            </div>
+        </div>
+
+        <div style="text-align:center">
+            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                [title]="chartOptions.title"></apx-chart>
+        </div>
+
+
+    </section>
+</main>
